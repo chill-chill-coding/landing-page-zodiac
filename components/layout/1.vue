@@ -14,11 +14,9 @@
       </div>
     </div>
     <div
-      v-for="(zodiacRow, i) in zodiacsRows"
-      :key="i"
-      class="self-stretch justify-center items-start gap-8 inline-flex">
+      class="self-stretch justify-center items-start gap-8 grid grid-cols-4 gap-y-20">
       <div
-        v-for="zodiac in zodiacRow"
+        v-for="zodiac in zodiacs"
         :key="zodiac.zodiac"
         class="grow shrink basis-0 flex-col justify-start items-start gap-8 inline-flex">
         <LayoutCard1 :zodiac="zodiac" />
@@ -117,15 +115,7 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    zodiacsRows() {
-      return this.zodiacs.reduce((acc, n, i) => {
-        i % 4 ? acc[acc.length - 1].push(n) : acc.push([n]);
-        return acc;
-      }, []);
-    },
-  },
+  }
 };
 </script>
 <style lang=""></style>

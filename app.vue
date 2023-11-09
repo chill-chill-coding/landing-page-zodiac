@@ -4,5 +4,10 @@
     <HeaderMain/>
     <Layout1/>
     <Layout2/>
+    <Layout3/>
+    <Layout4/>
+    <Layout5/>
+    <Layout6/>
+    <Footer/>
   </div>
 </template>
